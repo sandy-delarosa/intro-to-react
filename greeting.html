@@ -24,6 +24,23 @@
     	ReactDOM.render(
     		<Greeting />, document.getElementById('app')
     	);
+    	 class FavoriteMovies extends React.Component {
+    		render () {
+    			return (
+    				<div>
+    					<ol>
+    						<li>Little Mermaid</li>
+    						<li>Coraline</li>
+    						<li>Marry Poppins</li>
+    					</ol>
+    				</div>
+    			);
+    		}
+    	}
+
+    	ReactDOM.render(
+    		<FavoriteMovies />, document.getElementById('secondcomponent')
+    	);
 
     </script>
   </body>
