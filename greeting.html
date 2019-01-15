@@ -12,10 +12,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
     <script type="text/babel">
     	class Greeting extends React.Component {
+    		constructor(props) {
+    			super(props);
+    			this.state = {
+    				number:1964
+    		}
+    	}
     		render() {
     			return (
     				<div>
     					<h1>Hello World</h1>
+    					<h2>Oldest movie year: {this.state.number}</h2>
     				</div>
     			);
     		}
@@ -33,13 +40,15 @@
     						<li>Coraline</li>
     						<li>Marry Poppins</li>
     					</ol>
+    					<h3>Submitted by: {this.props.submitter}</h3>
     				</div>
     			);
     		}
     	}
 
     	ReactDOM.render(
-    		<FavoriteMovies />, document.getElementById('secondcomponent')
+    		<FavoriteMovies 
+    			submitter="Sandy De La Rosa"/>, document.getElementById('secondcomponent')
     	);
 
     </script>
